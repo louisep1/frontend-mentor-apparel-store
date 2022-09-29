@@ -13,9 +13,6 @@
 }
 
 body {
-  background: url(./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg)
-    no-repeat center center/cover;
-
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   color: var(--desaturated-red);
@@ -25,13 +22,15 @@ body {
   position: relative;
 
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* Logo: */
 header {
   position: absolute;
-  margin: 3rem 10rem;
-  border: red 3px solid;
+  top: 3rem;
+  left: 12rem;
+  /* border: red 3px solid; */
 }
 
 header img {
@@ -40,7 +39,6 @@ header img {
 
 /* Main body section with text | picture */
 main {
-  /* display: flex; */
   /* height: 100%; */
   /* height: 100vh; */
   display: grid;
@@ -54,8 +52,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin-right: 5rem;
   /* height: 100%; */
+  background: url(./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg)
+    no-repeat center center/cover;
 }
 
 h1 {
@@ -65,8 +66,8 @@ h1 {
   letter-spacing: 1rem;
   word-spacing: 100vw;
   line-height: 1.2;
-  border: 3px solid black;
-  width: 30rem;
+  /* border: 3px solid black; */
+  width: 28rem;
 }
 
 .dark {
@@ -75,21 +76,24 @@ h1 {
 }
 
 p {
-  border: 3px solid black;
-  width: 30rem;
+  /* border: 3px solid black; */
+  width: 28rem;
   line-height: 2;
 }
 
 form {
   display: flex;
+  /* border: black 3px solid; */
 }
 
 input {
-  width: 23rem;
+  width: 28rem;
   padding: 15px;
   background: transparent;
-  border: var(--dark-grayish-red) 1px solid;
+  /* border: var(--dark-grayish-red) 1px solid; */
+  border: var(--desaturated-red) 1px solid;
   border-radius: 40px;
+  transform: translateX(50px);
 }
 
 ::placeholder {
@@ -130,5 +134,10 @@ picture img {
       'main';
 
     background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
   }
 }
