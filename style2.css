@@ -13,6 +13,12 @@
 }
 
 body {
+  display: grid;
+  grid-template-areas:
+    'header hero'
+    'main hero';
+  grid-template-rows: 1fr 5fr;
+
   background: url(./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg)
     no-repeat center center/cover;
 
@@ -20,41 +26,50 @@ body {
   font-size: 16px;
   color: var(--desaturated-red);
 
-  min-height: 100vh;
-
-  position: relative;
-
-  overflow-y: hidden;
+  height: 100vh;
 }
 
-/* Logo: */
 header {
-  position: absolute;
+  grid-area: header;
+  /* border: 3px solid black; */
   margin: 3rem 10rem;
-  border: red 3px solid;
 }
 
 header img {
   width: 10rem;
 }
 
-/* Main body section with text | picture */
-main {
-  /* display: flex; */
-  /* height: 100%; */
-  /* height: 100vh; */
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+picture {
+  grid-area: hero;
+  width: 100%;
+  border: 3px solid black;
+  display: flex;
+  justify-content: flex-end;
 }
 
-/* Text */
-.text {
-  /* border: 3px green solid; */
+picture img {
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+  border: 3px solid black;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+
+  /* flex-direction: column; */
+  /* justify-items: center;
+  align-content: center; */
+  /* margin: 4rem 10rem; */
+}
+
+.text {
+  border: 3px green solid;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 30rem;
   /* height: 100%; */
 }
 
@@ -66,7 +81,7 @@ h1 {
   word-spacing: 100vw;
   line-height: 1.2;
   border: 3px solid black;
-  width: 30rem;
+  /* width: 30rem; */
 }
 
 .dark {
@@ -77,48 +92,19 @@ h1 {
 p {
   border: 3px solid black;
   width: 30rem;
-  line-height: 2;
-}
-
-form {
-  display: flex;
 }
 
 input {
-  width: 23rem;
-  padding: 15px;
-  background: transparent;
-  border: var(--dark-grayish-red) 1px solid;
-  border-radius: 40px;
-}
-
-::placeholder {
-  color: var(--desaturated-red);
+  width: 20rem;
 }
 
 button,
 button:hover {
   transition: 0.2s;
-  padding: 20px 50px;
-  border-radius: 40px;
-  border: none;
-  transform: translateX(-60px);
 }
 
 .btn-red {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-}
-
-/* Hero picture */
-picture {
-  /* width: 100%; */
-  height: 100vh;
-}
-
-picture img {
-  /* width: 100%; */
-  /* height: 100%; */
-  height: 100%;
 }
 
 @media (max-width: 480px) {

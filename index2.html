@@ -9,13 +9,24 @@
       href="./base-apparel-coming-soon-master/images/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
     <title>Base Apparel</title>
   </head>
   <body>
     <header>
       <img src="./base-apparel-coming-soon-master/images/logo.svg" alt="" />
     </header>
+
+    <picture>
+      <source
+        media="(max-width: 480px)"
+        srcset="./base-apparel-coming-soon-master/images/hero-mobile.jpg"
+      />
+      <img
+        src="./base-apparel-coming-soon-master/images/hero-desktop.jpg"
+        alt=""
+      />
+    </picture>
 
     <main>
       <div class="text">
@@ -26,7 +37,7 @@
           our launch deals.
         </p>
         <form>
-          <input type="email" placeholder="Email address" />
+          <input type="email" />
           <button type="submit" class="btn-red">
             <img
               src="./base-apparel-coming-soon-master/images/icon-arrow.svg"
@@ -35,17 +46,6 @@
           </button>
         </form>
       </div>
-
-      <picture>
-        <source
-          media="(max-width: 480px)"
-          srcset="./base-apparel-coming-soon-master/images/hero-mobile.jpg"
-        />
-        <img
-          src="./base-apparel-coming-soon-master/images/hero-desktop.jpg"
-          alt=""
-        />
-      </picture>
     </main>
   </body>
 </html>
