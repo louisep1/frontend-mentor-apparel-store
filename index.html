@@ -26,13 +26,19 @@
           our launch deals.
         </p>
         <form>
-          <input type="email" placeholder="Email address" />
-          <button type="submit" class="btn-red">
+          <input type="email" placeholder="Email address" id="email" />
+          <img
+            src="./base-apparel-coming-soon-master/images/icon-error.svg"
+            alt="error icon"
+            class="warning-icon"
+          />
+          <button type="submit" class="btn-red" id="submit">
             <img
               src="./base-apparel-coming-soon-master/images/icon-arrow.svg"
-              alt=""
+              alt="search button arrow"
             />
           </button>
+          <div class="warning-message">Please provide a valid email</div>
         </form>
       </div>
 
@@ -46,6 +52,8 @@
           alt=""
         />
       </picture>
+
+      <script src="./main.js"></script>
     </main>
   </body>
 </html>
